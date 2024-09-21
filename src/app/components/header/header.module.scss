@@ -1,0 +1,41 @@
+@use '../../variables.scss';
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  @include flex-align-center;
+  justify-content: space-between;
+}
+
+@mixin font-style($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+.container {
+  @include flex-space-between;
+  border-bottom: 1px solid variables.$borderGray;
+  margin: 1.5rem 3.5rem 0;
+  padding-bottom: 1.5rem;
+
+  .logoContainer {
+    @include flex-align-center;
+    gap: 0.5rem;
+
+    p {
+      @include font-style(1.5rem, bold);
+    }
+  }
+
+  .welcomeTitle {
+    @include font-style(1.5rem, 500);
+  }
+}
+
+.dateInfo {
+  font-size: 1rem;
+  color: variables.$gray300;
+}

@@ -1,0 +1,24 @@
+@use '../../variables.scss';
+
+@mixin button-style($background, $color) {
+  width: 100%;
+  height: 3.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background: $background;
+  color: $color;
+}
+
+.primary {
+  @include button-style(variables.$buttonPrimary, #FFF);
+}
+
+.secondary {
+  @include button-style(variables.$buttonSecondary, black);
+}
+
+.destructive {
+  @include button-style(variables.$buttonDestructive, #FFF);
+}

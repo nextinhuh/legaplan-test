@@ -1,0 +1,76 @@
+@use '../../variables.scss';
+
+%flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%text-item {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 0.5rem;
+}
+
+.container {
+  @extend %flex-center-column;
+  border: 1px solid variables.$borderGray;
+  padding: 2rem;
+  border-radius: 0.6rem;
+  width: 100%;
+
+  .title {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: variables.$gray300;
+  }
+
+  .listContainer {
+    @extend %flex-center-column;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    li {
+      @extend %flex-space-between;
+      width: 100%;
+      padding: 1rem;
+      border: 2px dashed variables.$borderGray;
+      border-radius: 0.4rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$hoverGray;
+        border-color: variables.$hoverGray;
+      }
+
+      p {
+        @extend %text-item;
+      }
+
+      svg {
+        color: variables.$gray200;
+      }
+    }
+  }
+}
+
+.finishedIconItemList {
+  color: #0796D3 !important;
+}
+
+.finishedTextItemList {
+  @extend %text-item;
+  color: variables.$gray300;
+  text-decoration: line-through;
+}
