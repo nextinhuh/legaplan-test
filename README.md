@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Legaplan Test Project
 
-## Getting Started
+Bem-vindo ao projeto Legaplan Test! Este README fornecerá todas as informações necessárias para configurar, instalar dependências e entender as tecnologias utilizadas neste projeto.
 
-First, run the development server:
+## Índice
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. [Descrição do Projeto](#descrição-do-projeto)
+2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+3. [Pré-requisitos](#pré-requisitos)
+4. [Instalação](#instalação)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Descrição do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O Legaplan Test é um projeto desenvolvido para demonstrar habilidades em desenvolvimento web utilizando Next.js, React, TypeScript e SCSS. O projeto inclui componentes como um cabeçalho, cartões de informação, botões estilizados e um modal com efeito de desfoque.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tecnologias Utilizadas
 
-## Learn More
+- **Next.js**: Framework React para desenvolvimento de aplicações web.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **SCSS**: Extensão do CSS que permite o uso de variáveis, aninhamento e mixins.
+- **CSS Modules**: Técnica para escopo local de classes CSS.
 
-To learn more about Next.js, take a look at the following resources:
+## Pré-requisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Antes de começar, certifique-se de ter o Node.js e o npm (ou yarn) instalados na sua máquina.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Node.js](https://nodejs.org/) (versão 20 ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+- [NextJS](https://nextjs.org/)
 
-## Deploy on Vercel
+## Instalação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Siga os passos abaixo para configurar o projeto em sua máquina local:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone o repositório**:
+
+   ```sh
+   git clone https://github.com/nextinhuh/legaplan-test.git
+
+2. **Navegue até o diretório do projeto:**:
+
+   ```sh
+   cd legaplan-test
+
+3. **Instale as dependências:**:
+
+   ```sh
+   npm install ou yarn install
+
+4. **Inicie o servidor de desenvolvimento:**:
+
+   ```sh
+   npm run dev ou yarn dev
+
+5. **Abra o navegador e acesse:**:
+
+   ```sh
+   http://localhost:3000
