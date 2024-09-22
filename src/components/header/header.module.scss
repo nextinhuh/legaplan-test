@@ -39,3 +39,11 @@
   font-size: 1rem;
   color: variables.$gray300;
 }
+
+@media (max-width: 768px) {
+  .container {
+    gap: 0.5rem;
+    align-items: start;
+    flex-direction: column;
+  }
+}

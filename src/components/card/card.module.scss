@@ -65,10 +65,6 @@
   }
 }
 
-.finishedIconItemList {
-  color: #0796D3 !important;
-}
-
 .finishedTextItemList {
   @extend %text-item;
   color: variables.$gray300;

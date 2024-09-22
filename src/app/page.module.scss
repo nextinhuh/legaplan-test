@@ -6,5 +6,18 @@
   gap: 1.5rem;
 
   margin-top: 2.5rem;
-  padding: 0rem 40rem;
+  margin-bottom: 1rem;
+  padding: 0rem 35%;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 0rem 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0rem 13%;
+  }
 }

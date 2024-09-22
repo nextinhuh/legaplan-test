@@ -1,28 +1,18 @@
 {
   "task": [
     {
-      "id": "1",
-      "name": "Buy groceries",
-      "completed": true
-    },
-    {
-      "id": "2",
-      "name": "Clean the house",
-      "completed": true
-    },
-    {
-      "id": "3",
-      "name": "Go to the gym",
-      "completed": true
-    },
-    {
       "id": "8c40",
       "name": "Comprar pneu",
-      "completed": false
+      "completed": true
     },
     {
       "id": "7495",
       "name": "Ir passear",
+      "completed": false
+    },
+    {
+      "id": "aedd",
+      "name": "Ir ao shopping",
       "completed": true
     }
   ]

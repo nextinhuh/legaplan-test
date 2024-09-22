@@ -1,4 +1,4 @@
-import { Square, SquareCheck, Trash } from 'lucide-react'
+import { Trash } from 'lucide-react'
 import style from './card.module.scss'
 import { DeleteTaskDialog } from '../delete-task-dialog'
 import { useState } from 'react'
@@ -6,6 +6,9 @@ import { Task } from '@/utils/types'
 import { useMutation, useQueryClient } from 'react-query'
 import { updateTask } from '@/service/task.service'
 import { useListAllTasksKey } from '@/service/queries/task.query'
+import checkboxIcon from '../../../public/assets/icons/checkbox.svg'
+import checkboxCheckedIcon from '../../../public/assets/icons/checkbox-checked.svg'
+import Image from 'next/image'
 
 interface CardProps {
   taskList?: Task[]
@@ -57,9 +60,15 @@ export function Card({ taskList, isLoading }: CardProps) {
           taskList.map((task) => {
             if (task.completed) return null
             return (
-              <li key={task.id} onClick={() => handleUpdateTask(task)}>
-                <Square size={26} />
-                <p>{task.name}</p>
+              <li key={task.id}>
+                <Image
+                  src={checkboxIcon}
+                  alt="Icone de checkbox"
+                  width={24}
+                  height={24}
+                  onClick={() => handleUpdateTask(task)}
+                />
+                <p onClick={() => handleUpdateTask(task)}>{task.name}</p>
                 <Trash
                   size={26}
                   onClick={() => handleOpenDeleteTaskDialog(task.id)}
@@ -76,9 +85,20 @@ export function Card({ taskList, isLoading }: CardProps) {
           taskList.map((task) => {
             if (!task.completed) return null
             return (
-              <li key={task.id} onClick={() => handleUpdateTask(task)}>
-                <SquareCheck className={style.finishedIconItemList} size={26} />
-                <p className={style.finishedItemList}>{task.name}</p>
+              <li key={task.id}>
+                <Image
+                  src={checkboxCheckedIcon}
+                  alt="Icone de checkbox"
+                  width={24}
+                  height={24}
+                  onClick={() => handleUpdateTask(task)}
+                />
+                <p
+                  className={style.finishedTextItemList}
+                  onClick={() => handleUpdateTask(task)}
+                >
+                  {task.name}
+                </p>
                 <Trash
                   size={26}
                   onClick={() => handleOpenDeleteTaskDialog(task.id)}

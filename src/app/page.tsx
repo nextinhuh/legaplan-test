@@ -16,20 +16,22 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <main className={styles.container}>
-        <Card taskList={taskListData} isLoading={taskLisIsFetching} />
+      <main>
+        <div className={styles.container}>
+          <Card taskList={taskListData} isLoading={taskLisIsFetching} />
 
-        <NewTaskDialog
-          isOpen={isNewTaskDialogOpen}
-          onClose={() => setIsNewTaskDialogModalOpen(false)}
-        ></NewTaskDialog>
+          <NewTaskDialog
+            isOpen={isNewTaskDialogOpen}
+            onClose={() => setIsNewTaskDialogModalOpen(false)}
+          ></NewTaskDialog>
 
-        <Button
-          onClick={() => setIsNewTaskDialogModalOpen(true)}
-          variant="primary"
-        >
-          Adicionar nova tarefa
-        </Button>
+          <Button
+            onClick={() => setIsNewTaskDialogModalOpen(true)}
+            variant="primary"
+          >
+            Adicionar nova tarefa
+          </Button>
+        </div>
       </main>
     </div>
   )
