@@ -44,7 +44,12 @@ Siga os passos abaixo para configurar o projeto em sua máquina local:
    ```sh
    cd legaplan-test
 
-3. **Instale as dependências:**
+3. **Crie um arquivo na raiz do projeto chamado .env e coloque a linha abaixo nele:**
+
+   ```sh
+   NEXT_PUBLIC_API_URL=http://localhost:3000/api
+
+4. **Instale as dependências:**
 
    ```sh
    npm install ou yarn install
