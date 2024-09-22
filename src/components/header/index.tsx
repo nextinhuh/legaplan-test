@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './header.module.scss'
 import logoIcon from '../../../public/assets/icons/logo.svg'
+import { GetDateNowFormated } from '@/utils/dates'
 
 export function Header() {
   return (
@@ -10,7 +11,7 @@ export function Header() {
         <p>FocalPoint</p>
       </div>
       <p className={styles.welcomeTitle}>Bem-vindo de volta, Marcus</p>
-      <p className={styles.dateInfo}>Segunda, 01 de dezembro de 2025</p>
+      <p className={styles.dateInfo}>{GetDateNowFormated()}</p>
     </header>
   )
 }

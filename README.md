@@ -12,13 +12,12 @@ Bem-vindo ao projeto Legaplan Test! Este README fornecerá todas as informaçõe
 
 ## Descrição do Projeto
 
-O Legaplan Test é um projeto desenvolvido para demonstrar habilidades em desenvolvimento web utilizando Next.js, React, TypeScript, JSON-Server e SCSS. O projeto inclui componentes como um cabeçalho, cartões de informação, botões estilizados e um modal com efeito de desfoque, tendo como foco um sistema de controle de tarefas.
+O Legaplan Test é um projeto desenvolvido para demonstrar habilidades em desenvolvimento web utilizando Next.js, React, TypeScript, e SCSS. O projeto inclui componentes como um cabeçalho, cartões de informação, botões estilizados e um modal com efeito de desfoque, tendo como foco um sistema de controle de tarefas.
 
 ## Tecnologias Utilizadas
 
 - **Next.js**: Framework React para desenvolvimento de aplicações web.
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **JSON-Server**: Ferramenta para criação de um back-end mockado para exemplificação dos dados.
 - **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
 - **SCSS**: Extensão do CSS que permite o uso de variáveis, aninhamento e mixins.
 - **CSS Modules**: Técnica para escopo local de classes CSS.
@@ -57,12 +56,7 @@ Siga os passos abaixo para configurar o projeto em sua máquina local:
    ```sh
    npm run dev ou yarn dev
 
-2. **Em outro terminal inicie o servidor do json-server :**
-
-   ```sh
-   npm run json-server ou yarn json-server
-
-3. **Abra o navegador e acesse:**
+2. **Abra o navegador e acesse:**
 
    ```sh
    http://localhost:3000
