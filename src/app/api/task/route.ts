@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { TASKS } from './[id]/route'
+import { TASKS } from '@/utils/mock'
 import { randomUUID } from 'crypto'
 
 export async function POST(req: Request) {

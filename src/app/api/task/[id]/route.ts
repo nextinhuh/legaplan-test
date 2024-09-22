@@ -1,26 +1,5 @@
+import { TASKS } from '@/utils/mock'
 import { NextResponse } from 'next/server'
-
-export let TASKS = [
-  {
-    id: '8c40',
-    name: 'Comprar pneu',
-    completed: true,
-  },
-  {
-    id: '7495',
-    name: 'Ir passear',
-    completed: false,
-  },
-  {
-    id: 'aedd',
-    name: 'Ir ao shopping',
-    completed: true,
-  },
-]
-
-function findItemIndex(id: string) {
-  return TASKS.findIndex((task) => task.id === id)
-}
 
 export async function GET(
   req: Request,
@@ -39,7 +18,7 @@ export async function PUT(
   req: Request,
   { params }: { params: { id: string } },
 ) {
-  const itemIndex = findItemIndex(params.id)
+  const itemIndex = TASKS.findIndex((task) => task.id === params.id)
 
   if (itemIndex === -1) {
     return NextResponse.json({ message: 'Item not found' }, { status: 404 })
@@ -57,12 +36,13 @@ export async function DELETE(
   req: Request,
   { params }: { params: { id: string } },
 ) {
-  const itemIndex = findItemIndex(params.id)
+  const itemIndex = TASKS.findIndex((task) => task.id === params.id)
 
   if (itemIndex === -1) {
     return NextResponse.json({ message: 'Item not found' }, { status: 404 })
   }
 
-  TASKS = TASKS.filter((task) => task.id !== params.id)
+  TASKS.splice(itemIndex, 1)
+
   return NextResponse.json({ message: 'Item deleted' })
 }
