@@ -11,6 +11,9 @@ const interTight = interTightFont({
 
 export const metadata: Metadata = {
   title: 'FocalPoint',
+  icons: {
+    icon: '/assets/icons/logo.svg',
+  },
 }
 
 export default function RootLayout({

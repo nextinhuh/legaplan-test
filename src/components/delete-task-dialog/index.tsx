@@ -1,17 +1,39 @@
+import { useMutation, useQueryClient } from 'react-query'
 import { Button } from '../button'
 import styles from './delete-task-dialog.module.scss'
+import { deleteTask } from '@/service/task.service'
+import { useListAllTasksKey } from '@/service/queries/task.query'
 
 interface DeleteTaskDialogProps {
+  taskId: string
   isOpen: boolean
   onClose: () => void
-  onConfirmDeleteTask: () => void
 }
 
 export function DeleteTaskDialog({
+  taskId,
   isOpen,
   onClose,
-  onConfirmDeleteTask,
 }: DeleteTaskDialogProps) {
+  const queryClient = useQueryClient()
+  const mutation = useMutation({
+    mutationFn: (taskId: string) => {
+      return deleteTask(taskId)
+    },
+    onSuccess: () => {
+      queryClient.refetchQueries({
+        queryKey: [useListAllTasksKey],
+      })
+    },
+  })
+
+  function handleDeleteTask(taskId: string) {
+    if (taskId !== '') {
+      mutation.mutate(taskId)
+      onClose()
+    }
+  }
+
   if (!isOpen) return null
 
   return (
@@ -27,7 +49,10 @@ export function DeleteTaskDialog({
           <Button onClick={onClose} variant="secondary">
             Cancelar
           </Button>
-          <Button onClick={onConfirmDeleteTask} variant="destructive">
+          <Button
+            onClick={() => handleDeleteTask(taskId)}
+            variant="destructive"
+          >
             Deletar
           </Button>
         </div>

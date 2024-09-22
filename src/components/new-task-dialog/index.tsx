@@ -3,7 +3,6 @@ import { Button } from '../button'
 import styles from './new-task-dialog.module.scss'
 import { createTask } from '@/service/task.service'
 import { useState } from 'react'
-import { Task } from '@/utils/types'
 import { useListAllTasksKey } from '@/service/queries/task.query'
 
 interface NewTaskDialogProps {
@@ -13,7 +12,7 @@ interface NewTaskDialogProps {
 
 export function NewTaskDialog({ isOpen, onClose }: NewTaskDialogProps) {
   const [taskName, setTaskName] = useState<string>('')
-  const { refetchQueries } = useQueryClient()
+  const queryClient = useQueryClient()
   const mutation = useMutation({
     mutationFn: (taskName: string) => {
       return createTask({
@@ -22,7 +21,7 @@ export function NewTaskDialog({ isOpen, onClose }: NewTaskDialogProps) {
       })
     },
     onSuccess: () => {
-      refetchQueries({
+      queryClient.refetchQueries({
         queryKey: [useListAllTasksKey],
       })
     },

@@ -13,19 +13,11 @@ export default function Home() {
   const { data: taskListData, isFetching: taskLisIsFetching } =
     useListAllTasksQuery()
 
-  function handleDeleteTask(taskId: string) {
-    console.log('deletar tarefa', taskId)
-  }
-
   return (
     <div>
       <Header />
       <main className={styles.container}>
-        <Card
-          taskList={taskListData}
-          isLoading={taskLisIsFetching}
-          onDeleteTask={handleDeleteTask}
-        />
+        <Card taskList={taskListData} isLoading={taskLisIsFetching} />
 
         <NewTaskDialog
           isOpen={isNewTaskDialogOpen}

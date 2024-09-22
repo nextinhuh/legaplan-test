@@ -3,12 +3,12 @@
     {
       "id": "1",
       "name": "Buy groceries",
-      "completed": false
+      "completed": true
     },
     {
       "id": "2",
       "name": "Clean the house",
-      "completed": false
+      "completed": true
     },
     {
       "id": "3",
@@ -16,11 +16,14 @@
       "completed": true
     },
     {
-      "id": "bf16",
-      "name": {
-        "name": "teste",
-        "completed": false
-      }
+      "id": "8c40",
+      "name": "Comprar pneu",
+      "completed": false
+    },
+    {
+      "id": "7495",
+      "name": "Ir passear",
+      "completed": true
     }
   ]
 }
