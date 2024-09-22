@@ -40,29 +40,29 @@ Siga os passos abaixo para configurar o projeto em sua máquina local:
    ```sh
    git clone https://github.com/nextinhuh/legaplan-test.git
 
-2. **Navegue até o diretório do projeto:**:
+2. **Navegue até o diretório do projeto:**
 
    ```sh
    cd legaplan-test
 
-3. **Instale as dependências:**:
+3. **Instale as dependências:**
 
    ```sh
    npm install ou yarn install
 
 ## Rodando projeto
 
-1. **Inicie o servidor de desenvolvimento:**:
+1. **Inicie o servidor de desenvolvimento:**
 
    ```sh
    npm run dev ou yarn dev
 
-2. **Em outro terminal inicie o servidor do json-server :**:
+2. **Em outro terminal inicie o servidor do json-server :**
 
    ```sh
    npm run json-server ou yarn json-server
 
-3. **Abra o navegador e acesse:**:
+3. **Abra o navegador e acesse:**
 
    ```sh
    http://localhost:3000
